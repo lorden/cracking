@@ -1,6 +1,7 @@
 def is_substring(haystack, needle):
     return needle in haystack
 
+
 def is_rotation(str1, str2):
     if len(str1) != len(str2):
         return False
