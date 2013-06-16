@@ -8,23 +8,25 @@ class Node:
     def append_to_tail(self, data):
         end = Node(data)
         pointer = self
-        while pointer.next != None:
+        while pointer.next is not None:
             pointer = pointer.next
         pointer.next = end
+
 
 def delete_node(root, data):
     n = root
     if n.data == data:
         return n.next
-    while n.next != None:
+    while n.next is not None:
         if n.next.data == data:
             n.next = n.next.next
             return root
         n = n.next
 
+
 def print_nodes(root):
     nodes = [root.data]
-    while root.next != None:
+    while root.next is not None:
         root = root.next
         nodes.append(root.data)
     print nodes
